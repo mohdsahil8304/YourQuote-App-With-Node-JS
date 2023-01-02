@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavascriptQuotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https:/
+      /cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* font-family: "Inter", sans-serif; */
+        font-family: "Open Sans", sans-serif;
+        /* font-family: "Rubik", sans-serif; */
+      }
+      body {
+        background-color: rgb(109, 38, 224);
+        /* display: grid; */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100vh;
+        /* width: 100vh; */
+      }
+      .number img {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -40px;
+        /* top: 5px; */
+        cursor: pointer;
+        animation: rot 1s linear;
+      }
+      .number:hover img {
+        animation: rot 1s linear;
+      }
+      @keyframes rot {
+        form {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .number {
+        font-family: var(--sans);
+        position: absolute;
+        margin: 0;
+        top: 15px;
+        right: 15px;
+        color: rgb(255, 255, 255, 0.7);
+      }
+
+      .author {
+        position: absolute;
+        padding: 30px;
+        font-size: 18px;
+        font-family: "Dancing Script", cursive;
+
+        margin-left: 380px;
+        top: 45%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, 50%);
+        width: 70%;
+      }
+      .quote {
+        position: absolute;
+        top: 22.5%;
+        left: 50%;
+        font-family: "Dancing Script", cursive;
+        font-size: 20px;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, 50%);
+        width: 70%;
+        font: 400;
+      }
+      .word {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        word-wrap: break-word;
+        width: 500px;
+      }
+      .quote-author-container {
+        top: 20%;
+        left: 50%;
+      }
+      #btn {
+        position: absolute;
+        height: 40px;
+        width: 100%;
+        top: 88.5%;
+        color: #fff;
+        /* left: 22.5%; */
+        border: none;
+        background-color: rgb(138, 16, 22);
+      }
+      /* button {
+  left: 20px;
+} */
+
+      .start-quote {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        font-size: 35px;
+        background-color: rgb(238, 190, 190);
+        color: rgb(148, 178, 206);
+      }
+
+      .box {
+        position: absolute;
+        top: -5%;
+        left: 50%;
+        height: 55%;
+        width: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, 50%);
+        background-color: rgb(238, 190, 190);
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <!-- <div id="quotes"></div> -->
+    <!-- <div id="author"></div> -->
+    <!-- <button id="btn">new Quotes</button> -->
+    <!-- <button id="tweetMe">Tweet</button> -->
+    <div class="container">
+      <div class="inner">
+        <div class="box">
+          <p class="number">
+            <img
+              src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png"
+              alt="tweetMe"
+              text="TweetMe"
+              id="tweetMe"
+            />
+          </p>
+          <div class="text quote-author-container">
+            <i class="start-quote fas fa-quote-left"></i>
+            <p id="quotes" class="quote word"></p>
+            <p id="author" class="author"></p>
+          </div>
+
+          <!-- <div class="quote-container"> -->
+
+          <!-- </div> -->
+
+          <button type="button" id="btn">new Quotes</button>
+          <!-- <button type="button" id="tweetMe">Tweet</button> -->
+        </div>
+      </div>
+    </div>
+    <!-- class="btn btn-primary btn-lg" -->
+    <!-- https://type.fit/api/quotes?appid=cc89f59b558cbf0dbc0e1550779a65b3 -->
+
+    <script>
+      const quotes = document.getElementById("quotes");
+      const author = document.getElementById("author");
+      const btn = document.getElementById("btn");
+      const tweetMe = document.getElementById("tweetMe");
+
+      let realData = "";
+      let quotesData = "";
+      const tweetNow = () => {
+        const tweetPost = `https://twitter.com/intent.tweet?text=${quotesData.text}`;
+        // const tweetPost = "https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png";
+        window.open(tweetPost);
+      };
+      const getNewQuotes = () => {
+        let rnum = Math.trunc(Math.random() * 1643);
+        // console.log(realData[rnum].author);
+        quotesData = realData[rnum];
+        quotes.innerText = `${quotesData.text}`;
+        quotesData.author == null
+          ? (author.innerText = "Unknown")
+          : (author.innerText = `${quotesData.author}`);
+      };
+      const getQuotes = async () => {
+        const api = "https://type.fit/api/quotes";
+        try {
+          let data = await fetch(api);
+          realData = await data.json();
+          getNewQuotes();
+          // console.log(realData[0].text);
+          //   console.log(realData[0].author);
+        } catch (error) {}
+      };
+      tweetMe.addEventListener("click", tweetNow);
+      btn.addEventListener("click", getNewQuotes);
+      getQuotes();
+    </script>
+  </body>
+</html>
